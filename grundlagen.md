@@ -1,0 +1,136 @@
+# Grundlagen
+
+- Optionen, shorthand, longhand
+- Argumente
+- `echo`
+- History
+Enable "Accessible Terminal" in Workspace Settings to use a screen reader with the shell.
+Publish your app
+Primary URL
+You can add your own custom domain after publishing your app.
+2-ahitsitsi-jalilyan-armenjalilyan06
+.replit.app
+Available
+What does publishing do?
+Publishing your app makes it available for anyone to use
+Your friends and users around the world can visit your app through your primary URL.
+Costs are included in Core subscriptions
+Costs vary depending on the type of technology used to publish your app.
+# Arbeitsbericht vom 24.09.2025
+
+- Thema: Grundlgen on Markdown und Shell
+- Name: Armen JALILYAN
+- Klasse: 2AHITS Gruppe 1
+- Fach: ITSI Übungen
+
+# Weitere Markdown Elemente
+
+```cpp 
+#include <stdio.h>
+
+int main()
+{
+     printf("hello world\n");
+}
+```
+
+Horizontale Linie:
+
+---
+
+[hier zur HTL](https://www.htl-braunau.at/)
+
+![image](image_4.png)
+
+> Erkläre mir die Anwendung des Linux Befehls ls (Chatgpt)
+
+# Grundlagen der Linux Shell
+
+Shell = textorientierte Schnittstelle zu einem Betriebssystem (Kernel)
+
+Anzeige in der Konsole: Prompt
+Eingabe nach dem Prompt 
+
+Beispiel: der Befehl `date`
+
+```sh
+§ date
+```
+
+Ausgabe:
+
+```
+Wed Sep 24 07:11:24 AM UTC 2025
+```
+
+Befehle können Optionen haben diese werden mit `_`  angeben.
+
+z.B.
+
+```sh
+§ date -
+```
+
+Ausgabe :
+
+```
+2025-09-24
+```
+
+Optionen aus einem Buchstaben = shorthand 
+
+longhand mit 2x `__`;
+
+```sh
+§ date --iso-8601
+```
+
+Mehr Informationen zu einem Behehl;
+
+- KI
+- häufig gibt es die Option `--help`
+
+```sh
+§date --help
+```
+
+- man pages
+  
+``` sh
+§ man date 
+```
+
+nocht in Replit aber man kann mi dem Text `man date` im Internet suchen.
+
+- KI
+Enable "Accessible Terminal" in Workspace Settings to use a screen reader with the shell.
+Publish your app
+Primary URL
+You can add your own custom domain after publishing your app.
+2-ahitsitsi-jalilyan-armenjalilyan06
+.replit.app
+Available
+What does publishing do?
+Publishing your app makes it available for anyone to use
+Your friends and users around the world can visit your app through your primary URL.
+Costs are included in Core subscriptions
+Costs vary depending on the type of technology used to publish your app.
+2AHITS SYTB Übungen
+Fach-Homepage
+
+9m
+ • 
+10 minutes ago
+
+- häufig gibt es die Option `--help`
+
+
+
+
+
+2AHITS SYTB Übungen
+Fach-Homepage
+
+8m
+ • 
+9 minutes ago
