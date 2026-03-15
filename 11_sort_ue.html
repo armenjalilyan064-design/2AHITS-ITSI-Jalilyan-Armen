@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+
+    
+        
+        <title>sort – Übungen::Grundlegende bash Tools</title>
+        
+    
+
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <!-- Make optional frontmatter `numbering` available to client-side JS as window.PAGE.numbering -->
+    <script>
+      window.PAGE = window.PAGE || {};
+      window.PAGE.numbering = null;
+    </script>
+
+
+</head>
+  <body>
+    <header class="page-header" role="banner">
+      <h1 class="project-name">sort – Übungen</h1>
+      
+      <h2 class="project-tagline">Grundlegende bash Tools</h2>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+
+      <div id="div_content">
+        <p>Mit per Pipe <code>|</code> verknüpften Befehlen ergeben sich viele Möglichkeiten. Zum Beispiel das Tool <code>sort</code> mit dem Daten sortiert werden können.</p>
+
+<hr />
+
+<p><strong>Beispiel</strong></p>
+
+<p>Sortiere die Einkaufsliste <a href="testdata/shopping.txt"><code>shopping.txt</code></a> (download der Datei mit <code>curl</code>), gib dann nur die letzten 5 Zeilen aus.</p>
+
+<p>Die letzten 5 Zeilen der unsortierten Datei:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cat </span>shopping.txt | <span class="nb">tail</span> <span class="nt">-n5</span>
+</code></pre></div></div>
+
+<p>Den Inhalt der Datei in sortierter Reihenfolge:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cat </span>shopping.txt | <span class="nb">sort</span>
+</code></pre></div></div>
+
+<p>Die letzten 5 Zeilen der sortierten Datei:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cat </span>shopping.txt | <span class="nb">sort</span> | <span class="nb">tail</span> <span class="nt">-n5</span>
+</code></pre></div></div>
+
+<hr />
+
+<h4 id="übung-zwei-files-kombinieren">Übung (Zwei Files kombinieren)</h4>
+
+<p>Download <a href="testdata/shopping2.txt"><code>shopping2.txt</code></a>. Sortiere den Inhalt von <code>shopping.txt</code> kombiniert mit <code>shopping2.txt</code> und gib von diesem sortierten Ergebnis die letzten 15 Zeilen aus.</p>
+
+<p>Hinweis: <code>cat</code> kann mehr als eine Datei zusammenfügen:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cat </span>shopping.txt shopping2.txt
+</code></pre></div></div>
+
+<p>Ergibt auf stdout die beiden Dateien hintereinander.</p>
+
+<hr />
+
+<h4 id="übung-sort">Übung (Sort)</h4>
+
+<p>Mit der Datei <a href="testdata/shopping.txt"><code>shopping.txt</code></a> – löse jeden Punkt durch einen Einzeiler mit Hilfe von Pipes:</p>
+
+<ul>
+  <li>Sortiere in umgekehrter Reihenfolge (eine Option von <code>sort</code>)</li>
+  <li>Sortiere nach der 2ten Spalte – Obstnamen (dies ist ebenfalls eine Option von <code>sort</code>)</li>
+  <li>Nimm alles bis auf die ersten 5 und letzten 5 Zeilen, sortiere das nach Personennamen in absteigender Reihenfolge (<code>'Z'</code> zuerst). Sortiere das Ergebnis aufsteigend nach Obstnamen und gibt die letzten 3 Zeilen des Endergebnisses aus.</li>
+</ul>
+
+<hr />
+
+<h4 id="übung-namensliste">Übung (Namensliste)</h4>
+
+<p>Erstelle mit <code>cut</code>, <code>sort</code> und <code>uniq</code> eine alphabetisch sortierte Liste an Namen die in <code>shopping.txt</code> vorkommen. Jeder Name soll in dieser Liste nur einmal stehen.</p>
+
+<hr />
+
+<h4 id="übung-middle">Übung (Middle)</h4>
+
+<p>Gib von <code>shopping.txt</code> <strong>alles bis auf</strong> die ersten zwei und die letzten zwei Zeilen aus. Hinweis: die <code>-n</code> Option von <code>head</code> und <code>tail</code> erlaubt dies durch eine spezielle Angabe bei der Zeilenanzahl. Löse durch einen Einzeiler mit Hilfe von Pipes.</p>
+
+<hr />
+
+<h4 id="übung-numeric-sort">Übung (Numeric Sort)</h4>
+
+<p>Recherchiere die sort Option <code>-n, --numeric-sort</code> und erkläre (auch anhand eines Beispiels) die Auswirkung wenn diese Option angegeben oder nicht angegeben ist.</p>
+
+<p>Hinweis: Sortiere eine Datei die ein- und zweistellige Zahlen gemischt untereinander enthält.</p>
+
+<hr />
+
+<h4 id="übung-sort-optionen">Übung (Sort Optionen)</h4>
+
+<p>Erkläre – mit Beispielen – die sort Optionen:</p>
+
+<ul>
+  <li><code>-m, --merge</code></li>
+  <li><code>-R, --random-sort</code></li>
+</ul>
+
+<hr />
+
+<h4 id="übung-letzte-5-von-beiden">Übung (Letzte 5 von beiden)</h4>
+
+<p>Nimm jeweils von <code>shopping.txt</code> und von <code>shopping2.txt</code> die letzten 5 Zeilen, füge diese zusammen und sortiere das Ergebnis (10 Zeilen).</p>
+
+<p>Hinweis: <code>cat</code> kann auch ein File und Standard-Input zusammenfügen. <code>-</code> steht dabei für Standard Input:</p>
+
+<pre><code>$ cat shopping.txt | cat shopping2.txt -
+</code></pre>
+
+<p>Erklärung: Der Output des ersten cat wird an das 2te cat weitergegeben. Das 2te cat fügt an den Inhalt von <code>shopping2.txt</code> die über stdin empfangenen Daten an.</p>
+
+<p>Anleitung:</p>
+
+<ul>
+  <li>Nimm von <code>shopping.txt</code> die letzten 5 Zeilen (mit <code>tail</code>) und füge diese an den Inhalt von <code>shopping2.txt</code> an (mit <code>cat</code> wie oben erklärt).</li>
+  <li>Nimm vom Ergebnis die letzten 10 Zeilen (mit <code>tail</code>)</li>
+  <li>Sortiere das Ergebnis</li>
+</ul>
+
+<hr />
+
+      </div>
+
+      <footer style="border-top: none;opacity: 0.3" class="site-footer">
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+        – Franz Matejka – HTL Braunau
+      </footer>
+    </main>
+
+      <script src="/assets/js/numbering.js" defer></script>
+      <script src="/assets/js/clipboard.js" defer></script>
+    </body>
+</html>
